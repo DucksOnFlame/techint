@@ -1,0 +1,16 @@
+{% extends 'techintapp/base.html' %}
+
+{% block title %}Strona wynikowa{% endblock title %}
+
+{% block content %}
+
+<h1>Show</h1>
+Podane dane to:<br>
+- Imie: {{ first_name }}<br>
+- Wiek: {{ age }}<br>
+<br>
+W takim razie szacuje, ze urodzilas/es sie w roku: {{ dob }}<br><br>
+
+<span>{{ errors }}</span>
+
+{% endblock content %}

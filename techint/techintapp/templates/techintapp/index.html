@@ -1,0 +1,13 @@
+{% extends 'techintapp/base.html' %}
+
+{% block title %}Strona glowna{% endblock title %}
+
+{% block content %}
+<h1>Witam na mojej stronie!</h1>
+<p>
+    Autor: {{ name }} {{ surname }}<br>
+    Numer indeksu: {{ indeks }}
+</p>
+
+<a href="{% url 'form' %}">Formularz</a>
+{% endblock content %}
