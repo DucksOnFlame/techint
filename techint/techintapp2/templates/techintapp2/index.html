@@ -1,0 +1,30 @@
+{% extends 'techintapp2/base.html' %}
+
+{% block action %}
+    {{ action }}
+{% endblock action%}
+
+{% block content %}
+    <h3>{{ action }}</h3>
+    {% if all_projects %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in all_projects %}
+                    <tr>
+                        <td>{{ project.id }}</td>
+                        <td>{{ project.title }}</td>
+                        <td><a href="{% url 'project_details' project.id %}">Pokaż</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Brak projektów</p>
+    {% endif %}
+{% endblock content %}

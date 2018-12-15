@@ -1,0 +1,21 @@
+{% extends 'techintapp2/base.html' %}
+
+{% block action %}
+    {{ action }}
+{% endblock action%}
+
+{% block content %}
+    {% if project %}
+        <h3>{{ project.title }}</h3>
+        <h4>{{ project.client }}</h4>
+        <p>{{ project.description }}<p>
+    {% endif %}
+
+    {% if tasks %}
+    <ul>
+    {% for task in tasks %}
+        <li>{{ task.title }} {{ task.description }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock content %}

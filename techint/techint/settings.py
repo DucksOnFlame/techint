@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'techintapp.apps.TechintappConfig'
+    'techintapp.apps.TechintappConfig',
+    'techintapp2.apps.Techintapp2Config'
 ]
 
 MIDDLEWARE = [

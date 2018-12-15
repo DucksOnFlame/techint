@@ -1,0 +1,16 @@
+{% extends 'techintapp2/base.html' %}
+
+{% block action %}
+    {{ action }}
+{% endblock action%}
+
+{% block content %}
+    <h3>{{ action }}</h3>
+    <form action="{% url 'new_dev' %}" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+    <input type="submit" value="Submit">
+</form>
+{% endblock content %}
